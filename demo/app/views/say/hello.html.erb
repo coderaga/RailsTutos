@@ -1,0 +1,31 @@
+<h1>Hello from Rails!</h1>
+
+<p>
+It is now <%= @time %>
+</p>
+
+<p>
+Say <a href ="/say/goodbye">Goodbye</a>!
+</p>
+
+<p>
+Say <%= link_to "Goodbye using Link to method", say_goodbye_path%>
+</p>
+<br>
+<p><h2>Its Playtime</h2>
+
+1.Addition: <%= 1+2 %><br>
+2.Concatenation: <%= "cow" + "boy" %><br>
+3.Time in one hour: <%= 1.hour.from_now.localtime %><br>
+</p>
+<b>
+<p>
+
+<h2>List of Files is Current Directory</h2>
+<%for file in @files %>
+
+<ul>File Name is: <%= file %></ul>
+
+<%end%>
+
+</p>
