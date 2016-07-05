@@ -19,4 +19,9 @@ class MovieTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+  test 'uploads portfolio via CSV' do
+    file = File.open("#{Rails.root}" + '/test/fixtures/movies.csv', 'r')
+    Movie.import(file)
+    assert_equal Movie.count, 22
+  end
 end

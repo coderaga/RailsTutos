@@ -28,7 +28,6 @@ class Movie < ActiveRecord::Base
   # Import CSV, Find or Create Movie by its title.
   # Update the record.
   def self.import(file)
-    puts 'HI'
     CSV.foreach(file.path, headers: true) do |row|
       movies_hash = row.to_hash
       movie = find_or_create_by!(title: movies_hash['title'])
